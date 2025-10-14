@@ -1,5 +1,8 @@
 # StructAgent
 
+[![PyPI version](https://img.shields.io/pypi/v/struct-agent.svg)](https://pypi.org/project/struct-agent/)
+[![Python versions](https://img.shields.io/pypi/pyversions/struct-agent.svg)](https://pypi.org/project/struct-agent/)
+
 A small, simple, and structured AI agent with reasoning capabilities and tool integration. Built with modern Python patterns and designed for extensibility.
 
 ## Features
@@ -22,18 +25,19 @@ A small, simple, and structured AI agent with reasoning capabilities and tool in
 
 ### Setup
 
-1. **Install dependencies**
+1. **Install from PyPi**
+   You can install from [PyPI](https://pypi.org/project/struct-agent/):
    ```bash
-   poetry install
+   poetry add struct-agent
    ```
 
-2. **Configure environment**
+3. **Configure environment**
    ```bash
    cp .env.example .env
    # Edit .env with your API keys
    ```
 
-3. **Set required environment variables**
+4. **Set required environment variables**
    ```bash
    OPENROUTER_API_KEY="your-api-key"
    OPENROUTER_MODEL_ID="qwen/qwen3-next-80b-a3b-thinking"
@@ -206,8 +210,8 @@ response = run_react_loop(query, client, config)
 
 ```
 src/struct_agent/
-├── __init__.py                 # Main package exports
-├── instructor_based/           # LLM client and agent logic
+├── __init__.py                # Main package exports
+├── instructor_based/          # LLM client and agent logic
 │   ├── __init__.py
 │   ├── new_agent.py           # Main ReAct agent implementation
 │   ├── client_manager.py      # LLM client management
@@ -215,7 +219,7 @@ src/struct_agent/
 │   ├── tool_manager.py        # Tool registry and execution
 │   ├── reasoning_modules.py   # Reasoning data models
 │   └── utils.py               # Utility functions
-├── tools/                      # Modular tool system
+├── tools/                     # Modular tool system
 │   ├── __init__.py
 │   ├── maths_tools.py         # Mathematical operations
 │   ├── searxng_tools.py       # Web search integration
