@@ -1,7 +1,7 @@
 [project]
 name = "struct_agent"
-version = "1.0.2"
-description = "A small, simple, and structured AI agent."
+version = "1.0.3"
+description = "A lightweight, type-safe ReAct AI agent framework built on Pydantic and Instructor."
 authors = [
     {name = "plomitt", email = "46419727+plomitt@users.noreply.github.com"},
 ]

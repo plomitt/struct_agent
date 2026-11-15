@@ -3,7 +3,7 @@
 [![PyPI version](https://img.shields.io/pypi/v/struct-agent.svg)](https://pypi.org/project/struct-agent/)
 [![Python versions](https://img.shields.io/pypi/pyversions/struct-agent.svg)](https://pypi.org/project/struct-agent/)
 
-A small, simple, and structured AI agent with reasoning capabilities and tool integration. Built with modern Python patterns and designed for extensibility.
+A lightweight, type-safe ReAct agent framework with structured reasoning steps and pluggable tools. Built on Pydantic and Instructor, and designed to be extended.
 
 ## Features
 
@@ -25,13 +25,24 @@ A small, simple, and structured AI agent with reasoning capabilities and tool in
 
 ### Setup
 
-1. **Install from PyPi**
-   You can install from [PyPI](https://pypi.org/project/struct-agent/):
+1. **Install**
+
+   To use StructAgent in your own project:
    ```bash
-   poetry add struct-agent
+   pip install struct_agent
+   # or, with Poetry
+   poetry add struct_agent
    ```
 
-3. **Configure environment**
+   To work on StructAgent itself, clone the repo and install it with its dependencies:
+   ```bash
+   cd struct_agent
+   poetry install
+   ```
+
+   If you installed from PyPI, create a .env with the variables below.
+
+2. **Configure environment**
    ```bash
    cp .env.example .env
    # Edit .env with your API keys
@@ -78,7 +89,7 @@ The agent supports various models through OpenRouter:
 - And many more
 
 It also supports whatever models you host locally with LM Studio.
-- 'ibm/ibm/granite-4-h-tiny'
+- 'ibm/granite-4-h-tiny'
 
 ## Quick Start
 
